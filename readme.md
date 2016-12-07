@@ -6,7 +6,7 @@ This is an example project using the Mithril 1.0 (RC5), TypeScript and node-sass
 
     npm install
 
-## Serve this project locally and recompile .ts sources on save:
+## Serve this project locally and recompile .ts and .scss sources on save:
 
     npm start
 
