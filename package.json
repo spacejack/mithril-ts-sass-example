@@ -1,0 +1,31 @@
+{
+  "name": "mithril-ts-sass-example",
+  "version": "0.0.1",
+  "description": "Mithril TypeScript/SASS Example",
+  "scripts": {
+    "serve": "http-server -p 3000 public",
+    "compile-ts": "browserify --debug src/ts/main.ts -p [ tsify --project src/ts/tsconfig.json ] -o public/js/app.js",
+    "compile-sass": "node-sass src/scss -o public/css --source-map-embed",
+    "build-ts": "browserify src/ts/main.ts -p [ tsify --project src/ts/tsconfig.json ] | uglifyjs -cm -o public/js/app.js",
+    "build-sass": "node-sass src/scss -o public/css --output-style compress",
+    "watch-ts": "watchify -v --debug src/ts/main.ts -p [ tsify --project src/ts/tsconfig.json ] -o public/js/app.js",
+    "watch-sass": "node-sass src/scss -o public/css --source-map-embed && node-sass src/scss -o public/css -w --source-map-embed",
+    "start": "npm-run-all -p watch-ts watch-sass serve",
+    "build": "npm-run-all build-ts build-sass",
+    "clean": "rm -f public/js/app.js public/css/app.css"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mithril": "github:spacejack/mithril.d.ts",
+    "browserify": "^13.1.1",
+    "http-server": "^0.9.0",
+    "mithril": "^1.0.0-rc.5",
+    "node-sass": "^3.13.0",
+    "npm-run-all": "^3.1.2",
+    "tsify": "^2.0.3",
+    "tslint": "^4.0.2",
+    "typescript": "^2.0.10",
+    "uglify-js": "^2.7.5",
+    "watchify": "^3.7.0"
+  }
+}
