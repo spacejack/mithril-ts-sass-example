@@ -1,6 +1,6 @@
-# Mithril 1.0 / Typescript / SASS Example Project
+# Mithril / Typescript / SASS Example Project
 
-This is an example project using the Mithril 1.0 (RC5), TypeScript and node-sass.
+This is an example project using [Mithril](https://mithril.js.org/), TypeScript and node-sass.
 
 ## Installation:
 
